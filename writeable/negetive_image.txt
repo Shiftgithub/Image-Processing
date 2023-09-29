@@ -1,1 +1,41 @@
  A negative image (also known as inverting the colors).
+ Importing Libraries:
+
+python
+Copy code
+import numpy as np
+import cv2
+import numpy as np: This line imports the NumPy library and assigns it the alias np. NumPy is a powerful library for numerical operations and is often used for working with arrays and matrices.
+
+import cv2: This line imports the OpenCV library, which is commonly used for computer vision tasks, including image processing and manipulation.
+
+Loading an Image:
+
+python
+Copy code
+img = cv2.imread('images/lena.jpg', cv2.IMREAD_GRAYSCALE)
+cv2.imread('images/lena.jpg', cv2.IMREAD_GRAYSCALE): This line reads an image from the file 'lena.jpg' in grayscale mode (cv2.IMREAD_GRAYSCALE). The resulting image is stored in the variable img. The grayscale mode means that the image will be loaded in black and white, with pixel values representing the intensity of gray.
+Creating a Negative Image:
+
+python
+Copy code
+negative_img = 255 - img
+Here, we create a negative image by subtracting each pixel's value in the img from 255. This operation inverts the pixel values. In a grayscale image, a pixel with a value of 0 becomes 255, and a pixel with a value of 255 becomes 0.
+Displaying Images:
+
+python
+Copy code
+cv2.imshow('input image', img)
+cv2.imshow('negative image', negative_img)
+cv2.imshow(): This function is used to display images. It takes two arguments: a window name (a string) and the image to display. In this code, it displays the original image with the window title 'input image' and the negative image with the window title 'negative image'.
+Waiting for a Key Press and Closing Windows:
+
+python
+Copy code
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+cv2.waitKey(0): This line waits indefinitely for a key press from the user. The argument 0 means that it waits until any key is pressed. Once a key is pressed, it continues to the next line.
+
+cv2.destroyAllWindows(): This line closes all OpenCV windows that were opened during the program execution. It's typically used to clean up and close any open windows after you're done with them.
+
+Overall, this code loads an image, creates its negative version, displays both the original and negative images, waits for a key press, and then closes the windows when a key is pressed. It's a simple example of basic image manipulation using OpenCV and NumPy in Python.
