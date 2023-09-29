@@ -1,0 +1,1 @@
+ A negative image (also known as inverting the colors).

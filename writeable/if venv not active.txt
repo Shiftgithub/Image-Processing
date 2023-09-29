@@ -1,0 +1,9 @@
+Showing this Error -> .\venv\Scripts\activate : File D:\Projects\Image Processing\venv\Scripts\Activate.ps1 cannot be loaded because running scripts is disabled on 
+this system. For more information, see about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170.
+At line:1 char:1
++ .\venv\Scripts\activate
++ ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : SecurityError: (:) [], PSSecurityException
+    + FullyQualifiedErrorId : UnauthorizedAccess
+
+this is the solution : Set-ExecutionPolicy Bypass -Scope Process
